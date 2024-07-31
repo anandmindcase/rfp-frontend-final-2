@@ -1,0 +1,176 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.loader {
+  border-top-color: #9ca3af; /* The color of your spinner */
+  animation: spin 1s linear infinite;
+}
+
+@layer components {
+  .landing-page-gradient-1 {
+    background-color: hsla(0, 0%, 100%, 1);
+    background-image:
+      radial-gradient(at 21% 11%, rgba(255, 119, 144, 0.53) 0px, transparent 50%),
+      radial-gradient(at 85% 0%, rgba(255, 200, 200, 0.52) 0px, transparent 50%),
+      radial-gradient(at 91% 36%, rgba(255, 180, 180, 0.68) 0px, transparent 50%),
+      radial-gradient(at 8% 40%, rgba(255, 160, 160, 0.46) 0px, transparent 50%);
+  }
+}
+
+@layer components {
+  .landing-page-gradient-2 {
+    background-color: hsla(41, 0%, 100%, .5);
+    background-image:
+      radial-gradient(at 68% 65%, hsla(207, 75%, 92%, .5) 0px, transparent 20%),
+      radial-gradient(at 100% 38%, hsla(257, 98%, 92%, .5) 0px, transparent 20%),
+      radial-gradient(at 85% 56%, hsla(219, 0%, 100%, 0.7) 0px, transparent 20%),
+      radial-gradient(at 67% 82%, hsla(323, 0%, 100%, .5) 0px, transparent 20%),
+      radial-gradient(at 73% 46%, hsla(176, 72%, 92%, .5) 0px, transparent 20%),
+      radial-gradient(at 51% 53%, hsla(317, 60%, 92%, .5) 0px, transparent 20%);
+  }
+}
+
+@layer components {
+  .landing-page-gradient-3 {
+    background-color: hsla(0,0%,100%,1);
+    background-image:
+      radial-gradient(at 26% 56%, hsla(207,40%,91%,.5) 0px, transparent 20%),
+      radial-gradient(at 19% 43%, hsla(257,40%,91%,.51) 0px, transparent 20%),
+      radial-gradient(at 56% 54%, hsla(323,40%,91%,.51) 0px, transparent 20%),
+      radial-gradient(at 44% 62%, hsla(176,40%,91%,.51) 0px, transparent 20%),
+      radial-gradient(at 57% 45%, hsla(317,40%,91%,.51) 0px, transparent 20%);
+  }
+}
+
+@layer components {
+  .landing-page-gradient-4 {
+    background-color: hsla(0,0%,100%,1);
+    background-image:
+      radial-gradient(at 79% 89%, hsla(240,51%,82%,0.23) 0px, transparent 20%), /* 21% 11% -> 79% 89% */
+      radial-gradient(at 15% 100%, hsla(46,57%,78%,0.22) 0px, transparent 20%), /* 85% 0% -> 15% 100% */
+      radial-gradient(at 9% 64%, hsla(221,100%,88%,0.28) 0px, transparent 20%), /* 91% 36% -> 9% 64% */
+      radial-gradient(at 92% 60%, hsla(323,82%,92%,0.26) 0px, transparent 20%); /* 8% 40% -> 92% 60% */
+  }
+}
+
+@layer components {
+  .landing-page-gradient-5 {
+    background-color: hsla(0,0%,100%,1);
+    background-image:
+      radial-gradient(at 21% 11%, hsla(240,51%,82%,0.83) 0px, transparent 20%),
+      radial-gradient(at 85% 0%, hsla(46,57%,78%,0.82) 0px, transparent 20%),
+      radial-gradient(at 91% 36%, hsla(221,100%,88%,0.88) 0px, transparent 20%),
+      radial-gradient(at 8% 40%, hsla(323,82%,92%,0.86) 0px, transparent 20%);
+  }
+}
+
+@layer components {
+  .box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #000; /* Adjust the color to match your design */
+    height: 100px; /* Set a fixed height */
+    width: 200px; /* Set a fixed width or max-width as needed */
+    padding: 10px;
+    box-sizing: border-box;
+  }
+
+  .box-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 100%;
+    width: 100%;
+  }
+}
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+
+    --primary: 222.2 47.4% 11.2%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 222.2 84% 4.9%;
+
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
